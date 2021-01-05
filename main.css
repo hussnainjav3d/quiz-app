@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.6;
+    background-color: #3f4f5f;
+    color: #fff;
+}
+
+a {
+    color: #ffd;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 35em;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+
+.player-stats {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 0 0 5px 5px;
+
+    -webkit-box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.question {
+    text-align: center;
+    margin-bottom: 2em;
+    user-select: none;
+}
+
+.options p {
+    padding: 1rem;
+    background-color: black;
+
+    -webkit-box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+
+    border: 1px solid black;
+    margin: 1em;
+    line-height: 1;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.btn-container {
+    margin: 2em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 10em; */
+}
+
+.btn {
+    padding: 0.8em 2em;
+    text-transform: uppercase;
+    background-color: black;
+    border-radius: 5px;
+
+    -webkit-box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: -2px 4px 23px 1px rgba(0, 0, 0, 0.75);
+}
+
+.options p:active {
+    background: gainsboro;
+    color: black;
+}
+
+footer {
+    max-width: 35em;
+    height: 10vh;
+    margin: 0 auto;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.active {
+    background-color: #fff !important;
+    color: black;
+}
+
+.result {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 5em;
+}
+
+.result .btn {
+    margin-top: 2em;
+    font-size: 1.5rem;
+    transition: opacity 0.1s linear;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.show {
+    display: flex;
+}
