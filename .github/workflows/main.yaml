@@ -2,11 +2,11 @@
 
 name: CI
 
-# Controls when the action will run. 
+# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
+    branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -22,8 +22,8 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-  
-      - name: Install Node JS 
+
+      - name: Install Node JS
         uses: actions/setup-node@v2-beta
         with:
           node-version: 12
@@ -31,4 +31,4 @@ jobs:
       - name: Installing Surge
         run: npm install -g surge
       - name: Deploy On surge
-        run: surge ./build quizapp-hussnain.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge . quizapp-hussnain.surge.sh --token ${{secrets.SURGE_TOKEN}}
